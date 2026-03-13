@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Task Manager</h1>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Add a task..."
+                    autocomplete="off">
+                <button id="addBtn" onclick="handleAddTask()">Add</button>
+            </div>
+
+            <div class="controls">
+                <input 
+                    type="text" 
+                    id="search" 
+                    placeholder="Search tasks...">
+                <button id="refreshBtn" onclick="refreshTasks()">Refresh</button>
+            </div>
+
+            <section class="task-section">
+                <h2>Tasks <span id="taskCount">0</span></h2>
+                <ul id="taskList"></ul>
+            </section>
+        </main>
+
+        <div id="notifications"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
